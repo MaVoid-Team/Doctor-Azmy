@@ -88,7 +88,15 @@ const Footer = () => {
             © جميع الحقوق محفوظة – دكتور محمد عزمي {new Date().getFullYear()}
           </p>
           <p className="text-center text-xs text-white/40">
-            Powered by <span className="font-semibold">MaVoid</span>
+            Powered by{" "}
+            <a
+              href="https://mavoid.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold hover:text-white transition-colors"
+            >
+              MaVoid
+            </a>
           </p>
         </div>
       </div>
