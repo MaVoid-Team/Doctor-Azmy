@@ -1,165 +1,118 @@
 "use client"
 
-import { useState } from "react"
+import { motion } from "framer-motion"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import BeforeAfterSlider from "@/components/before-after-slider"
+import CompareSlider from "@/components/compare-slider"
 
-export default function BeforeAfter() {
-  const [activeCategory, setActiveCategory] = useState("all")
-
-  const cases = [
+export default function BeforeAfterPage() {
+  const transformations = [
     {
       id: 1,
-      category: "weightloss",
-      title: "نحت الجسم وإنقاص الوزن",
-      description: "نتيجة فعالة لبرنامج علاج السمنة الشامل - فقد 40 كجم في 6 أشهر",
-      beforeImage: "/placeholder.svg?height=400&width=400",
-      afterImage: "/placeholder.svg?height=400&width=400",
+      title: "تحول مذهل: خسارة ٤٥ كجم",
+      description: "رحلة محمد خلال ٨ أشهر من الالتزام ببرنامج التغذية العلاجية، دون جراحة.",
+      stats: ["-٤٥ كجم", "٨ أشهر", "بدون جراحة"],
+      beforeImage: "/doctor-im.jpg", // Using placeholders for now
+      afterImage: "/doctor-im.jpg",
     },
     {
       id: 2,
-      category: "bodycontouring",
-      title: "شد الترهلات وتنسيق الجسم",
-      description: "تحسن واضح في مرونة الجلد والمظهر العام بعد الالتزام بالبرنامج",
-      beforeImage: "/placeholder.svg?height=400&width=400",
-      afterImage: "/placeholder.svg?height=400&width=400",
+      title: "التعافي من مقاومة الأنسولين",
+      description: "سارة استطاعت التغلب على أعراض مقاومة الأنسولين واستعادة نشاطها بالكامل.",
+      stats: ["تحسن ٩٠٪", "٦ أشهر", "نشاط وحيوية"],
+      beforeImage: "/placeholder-user.jpg",
+      afterImage: "/placeholder-user.jpg",
     },
     {
       id: 3,
-      category: "skincare",
-      title: "تفتيح وتنضيض البشرة",
-      description: "بشرة أكثر إشراقاً وحيوية بعد برنامج العناية المتخصص",
-      beforeImage: "/placeholder.svg?height=400&width=400",
-      afterImage: "/placeholder.svg?height=400&width=400",
-    },
-    {
-      id: 4,
-      category: "weightloss",
-      title: "نقص الوزن الملحوظ",
-      description: "تحول شامل في الوزن والصحة العامة - نتيجة ملهمة جداً",
-      beforeImage: "/placeholder.svg?height=400&width=400",
-      afterImage: "/placeholder.svg?height=400&width=400",
-    },
-    {
-      id: 5,
-      category: "bodycontouring",
-      title: "تصحيح الترهلات والدهون الموضعية",
-      description: "نتيجة ممتازة في تحديد ملامح الجسم وتحسن الثقة بالنفس",
-      beforeImage: "/placeholder.svg?height=400&width=400",
-      afterImage: "/placeholder.svg?height=400&width=400",
-    },
-    {
-      id: 6,
-      category: "skincare",
-      title: "علاج الهالات والشيخوخة",
-      description: "مظهر أكثر شباباً وحيوية للوجه مع تحسن واضح في جودة البشرة",
-      beforeImage: "/placeholder.svg?height=400&width=400",
-      afterImage: "/placeholder.svg?height=400&width=400",
-    },
-    {
-      id: 7,
-      category: "weightloss",
-      title: "تحول كامل في أسلوب الحياة",
-      description: "لم يكن فقط فقداناً للوزن بل اكتساب الصحة والنشاط والثقة",
-      beforeImage: "/placeholder.svg?height=400&width=400",
-      afterImage: "/placeholder.svg?height=400&width=400",
-    },
-    {
-      id: 8,
-      category: "bodycontouring",
-      title: "تحسن في قياسات الجسم",
-      description: "انخفاض ملحوظ في قياسات الخصر والوركين مع الحفاظ على الكتلة العضلية",
-      beforeImage: "/placeholder.svg?height=400&width=400",
-      afterImage: "/placeholder.svg?height=400&width=400",
-    },
+      title: "بناء عضلات ونحت الجسم",
+      description: "برنامج رياضي وغذائي متكامل للوصول للجسم المثالي.",
+      stats: ["زيادة عضلية", "٤ أشهر", "شكل مثالي"],
+      beforeImage: "/doctor-im.jpg",
+      afterImage: "/doctor-im.jpg",
+    }
   ]
-
-  const categories = [
-    { id: "all", label: "الكل" },
-    { id: "weightloss", label: "إنقاص الوزن" },
-    { id: "bodycontouring", label: "تنسيق الجسم" },
-    { id: "skincare", label: "العناية بالبشرة" },
-  ]
-
-  const filteredCases = activeCategory === "all" ? cases : cases.filter((c) => c.category === activeCategory)
 
   return (
-    <>
+    <main className="min-h-screen bg-background">
       <Navbar />
-      <main className="min-h-screen bg-background">
-        {/* Header */}
-        <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-4 animate-fadeInUp text-balance">
-              نتائج حقيقية وملهمة
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-3xl animate-fadeInUp" style={{ animationDelay: "0.1s" }}>
-              صور حقيقية لمرضى خضعوا لبرامج علاج السمنة ونحت الجسم تحت إشراف دكتور محمد عزمي، مع الالتزام الكامل
-              بالمعايير الطبية والأمان. اسحب المؤشر للمقارنة بين الصور.
-            </p>
-          </div>
-        </section>
 
-        {/* Filters */}
-        <section className="py-10 border-b border-border sticky top-16 bg-background/95 backdrop-blur-sm z-10">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap gap-3">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
-                  className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
-                    activeCategory === cat.id
-                      ? "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-lg shadow-primary/40"
-                      : "bg-muted text-foreground hover:bg-muted/80"
-                  }`}
-                >
-                  {cat.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-bold mb-6"
+          >
+            ✨ نتائج تتحدث عن نفسها
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-6xl font-black text-foreground mb-6"
+          >
+            معرض التحولات
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-xl text-muted-foreground max-w-3xl mx-auto"
+          >
+            شاهد كيف ساعد دكتور محمد عزمي مئات المرضى في تغيير حياتهم للأفضل.
+            الصورة تغني عن ألف كلمة.
+          </motion.p>
+        </div>
 
-        {/* Gallery */}
-        <section className="py-20">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10">
-              {filteredCases.map((caseItem, idx) => (
-                <div key={caseItem.id} className="animate-fadeInUp" style={{ animationDelay: `${idx * 0.08}s` }}>
-                  <div className="group bg-white rounded-2xl overflow-hidden border border-border/50 hover:border-primary/50 hover:shadow-2xl transition-all duration-500">
-                    <div className="relative overflow-hidden">
-                      <BeforeAfterSlider
-                        beforeImage={caseItem.beforeImage}
-                        afterImage={caseItem.afterImage}
-                        title={caseItem.title}
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                        {caseItem.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{caseItem.description}</p>
-                    </div>
+        <div className="space-y-24">
+          {transformations.map((item, idx) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7 }}
+              className="bg-white rounded-[3rem] p-6 md:p-12 shadow-xl border border-border/50"
+            >
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Text Info */}
+                <div className="order-2 lg:order-1">
+                  <div className="flex gap-3 mb-6 flex-wrap">
+                    {item.stats.map((stat, i) => (
+                      <span key={i} className="px-4 py-2 bg-secondary/30 text-secondary-foreground rounded-xl font-bold text-sm">
+                        {stat}
+                      </span>
+                    ))}
                   </div>
+                  <h3 className="text-3xl font-bold mb-6 text-foreground">{item.title}</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                    {item.description}
+                  </p>
+                  <button className="text-primary font-bold hover:gap-4 gap-2 transition-all flex items-center">
+                    اقرأ القصة كاملة <span>←</span>
+                  </button>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Disclaimer */}
-        <section className="py-16 bg-muted/50 border-t border-border">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-base text-muted-foreground leading-relaxed">
-              ⚕️ جميع النتائج المعروضة هي نتائج فعلية لمرضى حقيقيين. النتائج قد تختلف من شخص لآخر حسب الحالة الصحية
-              والالتزام ببرنامج العلاج. استشر الطبيب قبل بدء أي برنامج علاجي.
-            </p>
-          </div>
-        </section>
-      </main>
+                {/* Slider Component */}
+                <div className="order-1 lg:order-2">
+                  <CompareSlider
+                    beforeImage={item.beforeImage}
+                    afterImage={item.afterImage}
+                  />
+                  <p className="text-center text-xs text-muted-foreground mt-4 flex items-center justify-center gap-2">
+                    <span className="hidden md:inline">←</span>
+                    ملاحظة: حرك المؤشر للمقارنة
+                    <span className="hidden md:inline">→</span>
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       <Footer />
-    </>
+    </main>
   )
 }

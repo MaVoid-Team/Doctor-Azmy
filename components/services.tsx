@@ -1,88 +1,104 @@
 "use client"
 
+import { motion } from "framer-motion"
+
 const Services = () => {
   const services = [
     {
       title: "نحت الجسم وتفتيت الدهون",
-      desc: "تقنيات متقدمة لتفتيت الدهون وشد الترهلات",
+      desc: "تقنيات متقدمة لتفتيت الدهون وشد الترهلات بدون جراحة.",
       icon: "✨",
       items: ["ليزر تفتيت الدهون", "تقنية Cavitation", "RF وEMT"],
-      bgGradient: "from-blue-500/20 to-blue-600/20",
+      gradient: "from-blue-500/10 to-cyan-500/10",
+      border: "hover:border-blue-500/30"
     },
     {
-      title: "تجميل البشرة",
-      desc: "برامج متخصصة لتحسين صحة البشرة",
+      title: "تجميل البشرة والعناية",
+      desc: "برامج متخصصة لتحسين نضارة البشرة وعلاج المشاكل الجلدية.",
       icon: "💆",
       items: ["Dermapen جلسات", "تفتيح البشرة", "علاج الهالات"],
-      bgGradient: "from-purple-500/20 to-purple-600/20",
+      gradient: "from-purple-500/10 to-pink-500/10",
+      border: "hover:border-purple-500/30"
     },
     {
-      title: "إنبات الشعر",
-      desc: "حلول فعالة لمشاكل تساقط الشعر",
+      title: "علاج تساقط الشعر",
+      desc: "حلول فعالة لمشاكل السقوط وإعادة الإنبات بأحدث الطرق.",
       icon: "💇",
-      items: ["ميزوثيرابي متقدم", "Growth Factors", "علاجات فعالة"],
-      bgGradient: "from-pink-500/20 to-pink-600/20",
+      items: ["ميزوثيرابي متقدم", "Growth Factors", "خلايا جذعية"],
+      gradient: "from-emerald-500/10 to-teal-500/10",
+      border: "hover:border-emerald-500/30"
     },
     {
       title: "إزالة الشعر بالليزر",
-      desc: "تقنية آمنة وفعالة للنتائج الدائمة",
+      desc: "تقنية آمنة وفعالة لنتائج دائمة وبشرة ناعمة.",
       icon: "⚡",
-      items: ["Diode Laser 810nm", "نتائج دائمة", "آمن وفعال"],
-      bgGradient: "from-amber-500/20 to-amber-600/20",
+      items: ["Diode Laser 810nm", "نتائج دائمة", "تبريد ذاتي"],
+      gradient: "from-amber-500/10 to-orange-500/10",
+      border: "hover:border-amber-500/30"
     },
   ]
 
   return (
-    <section className="py-20 bg-muted/40">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fadeInUp">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">الخدمات الطبية</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            برامج علاجية شاملة تجمع بين أحدث التقنيات الطبية والخبرة العلمية
-          </p>
+    <section className="py-24 bg-muted/30 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl sm:text-5xl font-black text-foreground mb-4"
+          >
+            حلول طبية متكاملة
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-xl text-muted-foreground max-w-2xl mx-auto"
+          >
+            نجمع بين الطب والتكنولوجيا لنقدم لك أفضل النتائج في التغذية التجميل
+          </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {services.map((service, idx) => (
-            <div
+            <motion.div
               key={idx}
-              className={`group relative overflow-hidden rounded-2xl border border-border/50 p-8 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl animate-fadeInUp cursor-pointer bg-gradient-to-br ${service.bgGradient} from-white to-muted/10 hover:to-muted/30`}
-              style={{ animationDelay: `${idx * 0.12}s` }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className={`group relative overflow-hidden rounded-3xl border border-border bg-white p-8 md:p-10 transition-all duration-500 hover:shadow-2xl ${service.border}`}
             >
-              {/* Background gradient animation */}
-              <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 animate-shimmer" />
+              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
-              <div className="relative z-10">
-                {/* Icon with scale animation */}
-                <p className="text-5xl mb-6 group-hover:scale-125 group-hover:animate-bounceDown transition-transform duration-300 origin-left inline-block">
+              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
+                <div className="text-5xl p-4 bg-muted rounded-2xl group-hover:scale-110 group-hover:bg-white/50 transition-all duration-300 shadow-sm">
                   {service.icon}
-                </p>
+                </div>
 
-                {/* Title and description */}
-                <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-base text-muted-foreground mb-6 group-hover:text-foreground/80 transition-colors">
-                  {service.desc}
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                    {service.desc}
+                  </p>
 
-                {/* Service items with staggered animation */}
-                <div className="flex flex-wrap gap-2">
-                  {service.items.map((item, i) => (
-                    <span
-                      key={i}
-                      className="text-sm bg-primary/15 text-primary px-4 py-2 rounded-full font-medium group-hover:bg-primary/25 transition-all duration-300 transform group-hover:scale-105"
-                      style={{ transitionDelay: `${i * 50}ms` }}
-                    >
-                      {item}
-                    </span>
-                  ))}
+                  <div className="flex flex-wrap gap-2">
+                    {service.items.map((item, i) => (
+                      <span
+                        key={i}
+                        className="text-sm bg-background border border-border px-3 py-1 rounded-full font-medium text-foreground/80 group-hover:border-primary/30 transition-colors"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-
-              {/* Hover accent line */}
-              <div className="absolute bottom-0 right-0 h-1 bg-gradient-to-l from-primary to-transparent w-0 group-hover:w-full transition-all duration-500" />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

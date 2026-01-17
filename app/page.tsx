@@ -5,6 +5,8 @@ import About from "@/components/about"
 import Services from "@/components/services"
 import FeaturedVideos from "@/components/featured-videos"
 import Footer from "@/components/footer"
+import TestimonialCarousel from "@/components/testimonial-carousel"
+import ArticleCarousel from "@/components/article-carousel"
 
 export default function Home() {
   return (
@@ -13,7 +15,9 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
+      <TestimonialCarousel />
       <FeaturedVideos />
+      <ArticleCarousel />
       <Footer />
     </main>
   )
