@@ -71,18 +71,18 @@ const CompareSlider = ({
     return (
         <div
             ref={containerRef}
-            className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-3xl overflow-hidden cursor-col-resize select-none border border-border/50 shadow-2xl group"
+            className="relative w-full aspect-[3/4] md:aspect-[4/5] rounded-3xl overflow-hidden cursor-col-resize select-none border border-border/50 shadow-2xl group bg-neutral-100"
             onMouseDown={handleMouseDown}
             onTouchStart={handleMouseDown}
             onClick={handleContainerClick}
         >
-            {/* After Image (Background - Color/Full) */}
-            <div className="absolute inset-0 w-full h-full bg-gray-100">
+            {/* After Image (Background) */}
+            <div className="absolute inset-0 w-full h-full">
                 <Image
                     src={afterImage}
                     alt="After Transformation"
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     draggable={false}
                 />
                 {/* Visual Label */}
@@ -91,18 +91,21 @@ const CompareSlider = ({
                 </div>
             </div>
 
-            {/* Before Image (Foreground - Clipped/Grayscale usually) */}
+            {/* Before Image (Foreground) */}
             <div
-                className="absolute inset-0 w-full h-full bg-gray-200 overflow-hidden"
+                className="absolute inset-0 w-full h-full bg-neutral-100/50" // Semi-transparent bg for the clipped overlay if needs to cover
                 style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
-                <Image
-                    src={beforeImage}
-                    alt="Before Transformation"
-                    fill
-                    className="object-cover filter grayscale contrast-125" // Adding subtle filter for drama
-                    draggable={false}
-                />
+                <div className="absolute inset-0 w-full h-full bg-neutral-100"> {/* Solid backer for Before slide to obscure After slide */}
+                    <Image
+                        src={beforeImage}
+                        alt="Before Transformation"
+                        fill
+                        className="object-contain"
+                        draggable={false}
+                    />
+                </div>
+
                 {/* Visual Label */}
                 <div className="absolute top-4 left-4 bg-black/60 backdrop-blur text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg z-10 pointer-events-none">
                     {beforeLabel}

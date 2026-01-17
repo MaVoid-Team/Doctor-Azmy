@@ -9,27 +9,43 @@ export default function BeforeAfterPage() {
   const transformations = [
     {
       id: 1,
-      title: "تحول مذهل: خسارة ٤٥ كجم",
-      description: "رحلة محمد خلال ٨ أشهر من الالتزام ببرنامج التغذية العلاجية، دون جراحة.",
-      stats: ["-٤٥ كجم", "٨ أشهر", "بدون جراحة"],
-      beforeImage: "/doctor-im.jpg", // Using placeholders for now
-      afterImage: "/doctor-im.jpg",
+      title: "قصة نجاح ملهمة",
+      description: "التزام كامل ببرنامج التغذية العلاجية أثمر عن نتائج مذهلة في وقت قياسي.",
+      stats: ["خسارة وزن ملحوظة", "٦ أشهر", "تغيير نمط حياة"],
+      beforeImage: "/before.jpg",
+      afterImage: "/after1.jpg",
     },
     {
       id: 2,
-      title: "التعافي من مقاومة الأنسولين",
-      description: "سارة استطاعت التغلب على أعراض مقاومة الأنسولين واستعادة نشاطها بالكامل.",
-      stats: ["تحسن ٩٠٪", "٦ أشهر", "نشاط وحيوية"],
-      beforeImage: "/placeholder-user.jpg",
-      afterImage: "/placeholder-user.jpg",
+      title: "تحول جذري",
+      description: "من المعاناة مع الوزن الزائد إلى التمتع بلياقة بدنية وصحة مثالية.",
+      stats: ["-٣٠ كجم", "٨ أشهر", "بدون حرمان"],
+      beforeImage: "/before2.jpg",
+      afterImage: "/after2.jpg",
     },
     {
       id: 3,
-      title: "بناء عضلات ونحت الجسم",
-      description: "برنامج رياضي وغذائي متكامل للوصول للجسم المثالي.",
-      stats: ["زيادة عضلية", "٤ أشهر", "شكل مثالي"],
-      beforeImage: "/doctor-im.jpg",
-      afterImage: "/doctor-im.jpg",
+      title: "استعادة الثقة",
+      description: "الوصول للوزن المثالي ليس مستحيلاً مع التخطيط السليم والإرادة.",
+      stats: ["جسم رياضي", "٥ أشهر", "متابعة دورية"],
+      beforeImage: "/before3.jpg",
+      afterImage: "/after3.jpg",
+    },
+    {
+      id: 4,
+      title: "تغيير شامل",
+      description: "نتائج رائعة مع برامج الديتوكس والتغذية المتوازنة.",
+      stats: ["نضارة وحيوية", "٤ أشهر", "صحة أفضل"],
+      beforeImage: "/before4.jpg",
+      afterImage: "/after4.jpg",
+    },
+    {
+      id: 6,
+      title: "رحلة التحدي",
+      description: "نموذج للإصرار والتحدي للوصول لأفضل نسخة من الذات.",
+      stats: ["قوام مثالي", "٧ أشهر", "ثقة بالنفس"],
+      beforeImage: "/before6.jpg",
+      afterImage: "/after6.jpg",
     }
   ]
 
@@ -61,7 +77,7 @@ export default function BeforeAfterPage() {
             className="text-xl text-muted-foreground max-w-3xl mx-auto"
           >
             شاهد كيف ساعد دكتور محمد عزمي مئات المرضى في تغيير حياتهم للأفضل.
-            الصورة تغني عن ألف كلمة.
+            الصور أدناه هي لقصص نجاح حقيقية من داخل العيادة.
           </motion.p>
         </div>
 
