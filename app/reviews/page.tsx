@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
@@ -9,15 +8,15 @@ import { X, ZoomIn } from "lucide-react"
 
 // Mock data for reviews - in a real app these would be paths to actual screenshots
 const reviews = [
-    { id: 1, src: "/placeholder.jpg", alt: "Review 1", ratio: "aspect-[3/4]" },
-    { id: 2, src: "/placeholder.jpg", alt: "Review 2", ratio: "aspect-[4/3]" },
-    { id: 3, src: "/placeholder.jpg", alt: "Review 3", ratio: "aspect-[3/5]" },
-    { id: 4, src: "/placeholder.jpg", alt: "Review 4", ratio: "aspect-[3/4]" },
-    { id: 5, src: "/placeholder.jpg", alt: "Review 5", ratio: "aspect-[4/5]" },
-    { id: 6, src: "/placeholder.jpg", alt: "Review 6", ratio: "aspect-[3/4]" },
-    { id: 7, src: "/placeholder.jpg", alt: "Review 7", ratio: "aspect-[4/3]" },
-    { id: 8, src: "/placeholder.jpg", alt: "Review 8", ratio: "aspect-[3/5]" },
-    { id: 9, src: "/placeholder.jpg", alt: "Review 9", ratio: "aspect-[4/5]" },
+    { id: 1, src: "placeholder.jpg", alt: "Review 1", ratio: "aspect-[3/4]" },
+    { id: 2, src: "placeholder.jpg", alt: "Review 2", ratio: "aspect-[4/3]" },
+    { id: 3, src: "placeholder.jpg", alt: "Review 3", ratio: "aspect-[3/5]" },
+    { id: 4, src: "placeholder.jpg", alt: "Review 4", ratio: "aspect-[3/4]" },
+    { id: 5, src: "placeholder.jpg", alt: "Review 5", ratio: "aspect-[4/5]" },
+    { id: 6, src: "placeholder.jpg", alt: "Review 6", ratio: "aspect-[3/4]" },
+    { id: 7, src: "placeholder.jpg", alt: "Review 7", ratio: "aspect-[4/3]" },
+    { id: 8, src: "placeholder.jpg", alt: "Review 8", ratio: "aspect-[3/5]" },
+    { id: 9, src: "placeholder.jpg", alt: "Review 9", ratio: "aspect-[4/5]" },
 ]
 
 export default function ReviewsPage() {
@@ -60,11 +59,10 @@ export default function ReviewsPage() {
                             className="break-inside-avoid relative group cursor-zoom-in rounded-3xl overflow-hidden border border-border bg-white shadow-sm hover:shadow-xl transition-all duration-300"
                         >
                             <div className={`relative ${review.ratio} w-full`}>
-                                <Image
+                                <img
                                     src={review.src}
                                     alt={review.alt}
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105 w-full h-full absolute inset-0"
                                 />
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
 
@@ -103,11 +101,10 @@ export default function ReviewsPage() {
 
                             <div className="relative flex-1 min-h-[50vh]">
                                 {reviews.find(r => r.id === selectedId) && (
-                                    <Image
+                                    <img
                                         src={reviews.find(r => r.id === selectedId)!.src}
                                         alt="Review Details"
-                                        fill
-                                        className="object-contain bg-mutde/20"
+                                        className="object-contain bg-mutde/20 w-full h-full absolute inset-0"
                                     />
                                 )}
                             </div>

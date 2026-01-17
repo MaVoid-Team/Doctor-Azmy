@@ -41,7 +41,7 @@ const TestimonialCarousel = () => {
 
     return (
         <section className="py-24 bg-primary text-primary-foreground overflow-hidden relative">
-            <div className="absolute top-0 left-0 w-full h-full bg-[url('/noise.png')] opacity-10 mix-blend-overlay"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-[url('noise.png')] opacity-10 mix-blend-overlay"></div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-black mb-4">قصص نجاح حقيقية</h2>

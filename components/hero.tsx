@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { motion } from "framer-motion"
 import { ArrowDown } from "lucide-react"
 
@@ -72,7 +71,7 @@ const Hero = () => {
               <div className="flex -space-x-4 space-x-reverse">
                 {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden relative ring-2 ring-background hover:scale-110 transition-transform duration-300 z-0 hover:z-10">
-                    <Image src="/placeholder-user.jpg" alt="Client" fill className="object-cover" />
+                    <img src="placeholder-user.jpg" alt="Client" className="object-cover w-full h-full absolute inset-0" />
                   </div>
                 ))}
               </div>
@@ -100,12 +99,10 @@ const Hero = () => {
               <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-white/10 backdrop-blur-sm border border-white/20 shadow-2xl transition-transform duration-500 group-hover:rotate-y-6">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/90 z-20 opacity-80" />
 
-                <Image
-                  src="/doctor-im.jpg"
+                <img
+                  src="doctor-im.jpg"
                   alt="Dr. Mohamed Azmy"
-                  fill
-                  className="object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                  priority
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-110 w-full h-full absolute inset-0"
                 />
 
                 {/* Floating Holographic Badge Top Right */}

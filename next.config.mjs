@@ -7,9 +7,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-
-
-
+  basePath: "/Doctor-Azmy",
+  assetPrefix: "/Doctor-Azmy/",
 }
 
 export default nextConfig

@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
 
 const About = () => {
   const credentials = [
@@ -62,7 +61,7 @@ const About = () => {
               viewport={{ once: true }}
               className="pt-4"
             >
-              <Image src="/signature.png" alt="Signature" width={150} height={50} className="opacity-0 hidden" /> {/* Placeholder for signature if exists, hidden for now */}
+              <img src="signature.png" alt="Signature" width={150} height={50} className="opacity-0 hidden" /> {/* Placeholder for signature if exists, hidden for now */}
             </motion.div>
           </div>
         </div>

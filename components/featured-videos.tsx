@@ -13,21 +13,21 @@ const FeaturedVideos = () => {
       title: "شاهد قصة تحول واحدة من أنجح الحالات",
       description: "نتيجة مذهلة لمريض التزم ببرنامج العلاج الشامل",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "/placeholder.svg?height=400&width=600",
+      thumbnail: "placeholder.svg?height=400&width=600",
     },
     {
       id: 2,
       title: "نصائح مهمة لإنقاص الوزن بشكل آمن",
       description: "أهم الخطوات التي يجب اتباعها للحصول على نتائج دائمة",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "/placeholder.svg?height=400&width=600",
+      thumbnail: "placeholder.svg?height=400&width=600",
     },
     {
       id: 3,
       title: "التغذية العلاجية وأهميتها في حياتك",
       description: "فهم عميق لدور التغذية السليمة في تحسين الصحة",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "/placeholder.svg?height=400&width=600",
+      thumbnail: "placeholder.svg?height=400&width=600",
     },
   ]
 
@@ -86,7 +86,7 @@ const FeaturedVideos = () => {
 
               {/* Video or Thumbnail */}
               <img
-                src={videos[currentIndex].thumbnail || "/placeholder.svg"}
+                src={videos[currentIndex].thumbnail || "placeholder.svg"}
                 alt={videos[currentIndex].title}
                 className="w-full h-full object-cover"
               />
@@ -121,11 +121,10 @@ const FeaturedVideos = () => {
               <button
                 key={idx}
                 onClick={() => goToSlide(idx)}
-                className={`h-3 rounded-full transition-all duration-300 ${
-                  idx === currentIndex
+                className={`h-3 rounded-full transition-all duration-300 ${idx === currentIndex
                     ? "bg-primary w-10 shadow-lg shadow-primary/50"
                     : "bg-primary/30 w-3 hover:bg-primary/50"
-                }`}
+                  }`}
               />
             ))}
           </div>
