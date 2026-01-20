@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect, useCallback } from "react"
+import Image from "next/image"
 import { GripVertical } from "lucide-react"
 
 interface CompareSliderProps {
@@ -77,10 +78,11 @@ const CompareSlider = ({
         >
             {/* After Image (Background) */}
             <div className="absolute inset-0 w-full h-full">
-                <img
+                <Image
                     src={afterImage}
                     alt="After Transformation"
-                    className="object-contain w-full h-full absolute inset-0"
+                    fill
+                    className="object-contain"
                     draggable={false}
                 />
                 {/* Visual Label */}
@@ -95,10 +97,11 @@ const CompareSlider = ({
                 style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
                 <div className="absolute inset-0 w-full h-full bg-neutral-100"> {/* Solid backer for Before slide to obscure After slide */}
-                    <img
+                    <Image
                         src={beforeImage}
                         alt="Before Transformation"
-                        className="object-contain w-full h-full absolute inset-0"
+                        fill
+                        className="object-contain"
                         draggable={false}
                     />
                 </div>

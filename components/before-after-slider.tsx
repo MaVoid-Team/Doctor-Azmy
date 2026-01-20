@@ -46,7 +46,7 @@ const BeforeAfterSlider = ({ beforeImage, afterImage, title }: BeforeAfterSlider
       {/* Before Image (Background) */}
       <div className="absolute inset-0 w-full h-full bg-muted overflow-hidden">
         <div className="w-full h-full relative">
-          <img src={beforeImage || "placeholder.svg"} alt="قبل" className="w-full h-full object-cover" />
+          <img src={beforeImage || "/placeholder.svg"} alt="قبل" className="w-full h-full object-cover" />
           {/* Label */}
           <div className="absolute top-4 right-4 bg-black/60 text-white px-4 py-2 rounded-lg font-semibold text-sm backdrop-blur-sm">
             قبل
@@ -58,7 +58,7 @@ const BeforeAfterSlider = ({ beforeImage, afterImage, title }: BeforeAfterSlider
       <div className="absolute inset-0 overflow-hidden transition-all duration-75" style={{ width: `${position}%` }}>
         <div className="w-screen h-full relative">
           <img
-            src={afterImage || "placeholder.svg"}
+            src={afterImage || "/placeholder.svg"}
             alt="بعد"
             className="w-full h-full object-cover"
             style={{ maxWidth: "none" }}
