@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  doctor-azmy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: doctor-azmy-app
+    restart: unless-stopped
+    ports:
+      - "3444:3000"  # Map container port 3000 to host port 3001
+    networks:
+      - doctor-azmy-network
+    environment:
+      - NODE_ENV=production
+      - HOSTNAME=0.0.0.0
+
+networks:
+  doctor-azmy-network:
+    driver: bridge
