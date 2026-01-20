@@ -25,7 +25,7 @@ const Navbar = () => {
     { label: "السيرة المهنية", href: "/portfolio" },
     { label: "تجارب ناجحة", href: "/reviews" },
     { label: "المقالات", href: "/articles" },
-    { label: "تواصل معنا", href: "/contact" },
+    { label: "التغذية العلاجية", href: "/nutrition" },
   ]
 
   return (
@@ -47,7 +47,7 @@ const Navbar = () => {
                 دكتور محمد عزمي
               </span>
               <span className="text-xs text-muted-foreground font-medium tracking-wide">
-                استشاري التغذية العلاجية
+                استشاري التخسيس
               </span>
             </div>
           </Link>

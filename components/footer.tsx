@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="animate-fadeInUp">
             <h3 className="text-2xl font-bold mb-4">دكتور محمد عزمي</h3>
-            <p className="text-sm text-white/70 mb-4">علاج السمنة والتغذية العلاجية بأفضل المعايير الطبية</p>
+            <p className="text-sm text-white/70 mb-4">علاج السمنة والتخسيس بأفضل المعايير الطبية</p>
             <p className="text-sm text-white/70">الأفضل في المنصورة والشرقية</p>
           </div>
 

@@ -7,17 +7,32 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { X, ZoomIn } from "lucide-react"
 
-// Mock data for reviews - in a real app these would be paths to actual screenshots
+// Success stories from customer reviews
 const reviews = [
-    { id: 1, src: "/placeholder.jpg", alt: "Review 1", ratio: "aspect-[3/4]" },
-    { id: 2, src: "/placeholder.jpg", alt: "Review 2", ratio: "aspect-[4/3]" },
-    { id: 3, src: "/placeholder.jpg", alt: "Review 3", ratio: "aspect-[3/5]" },
-    { id: 4, src: "/placeholder.jpg", alt: "Review 4", ratio: "aspect-[3/4]" },
-    { id: 5, src: "/placeholder.jpg", alt: "Review 5", ratio: "aspect-[4/5]" },
-    { id: 6, src: "/placeholder.jpg", alt: "Review 6", ratio: "aspect-[3/4]" },
-    { id: 7, src: "/placeholder.jpg", alt: "Review 7", ratio: "aspect-[4/3]" },
-    { id: 8, src: "/placeholder.jpg", alt: "Review 8", ratio: "aspect-[3/5]" },
-    { id: 9, src: "/placeholder.jpg", alt: "Review 9", ratio: "aspect-[4/5]" },
+    { id: 1, src: "/rev1.jpg", alt: "Review 1" },
+    { id: 2, src: "/rev2.jpg", alt: "Review 2" },
+    { id: 3, src: "/rev3.jpg", alt: "Review 3" },
+    { id: 4, src: "/rev4.jpg", alt: "Review 4" },
+    { id: 5, src: "/rev5.jpg", alt: "Review 5" },
+    { id: 6, src: "/rev6.jpg", alt: "Review 6" },
+    { id: 7, src: "/rev7.jpg", alt: "Review 7" },
+    { id: 8, src: "/rev9.jpg", alt: "Review 8" },
+    { id: 9, src: "/rev10.jpg", alt: "Review 9" },
+    { id: 10, src: "/rev11.jpg", alt: "Review 10" },
+    { id: 11, src: "/rev12.jpg", alt: "Review 11" },
+    { id: 12, src: "/rev13.jpg", alt: "Review 12" },
+    { id: 13, src: "/rev14.jpg", alt: "Review 13" },
+    { id: 14, src: "/rev15.jpg", alt: "Review 14" },
+    { id: 15, src: "/rev16.jpg", alt: "Review 15" },
+    { id: 16, src: "/rev17.jpg", alt: "Review 16" },
+    { id: 17, src: "/rev18.jpg", alt: "Review 17" },
+    { id: 18, src: "/rev19.jpg", alt: "Review 18" },
+    { id: 19, src: "/rev20.jpg", alt: "Review 19" },
+    { id: 20, src: "/rev21.jpg", alt: "Review 20" },
+    { id: 21, src: "/rev22.jpg", alt: "Review 21" },
+    { id: 22, src: "/rev23.jpg", alt: "Review 22" },
+    { id: 23, src: "/rev24.jpg", alt: "Review 23" },
+    { id: 24, src: "/rev25.jpg", alt: "Review 24" },
 ]
 
 export default function ReviewsPage() {
@@ -46,8 +61,8 @@ export default function ReviewsPage() {
                     </motion.p>
                 </div>
 
-                {/* Masonry Grid */}
-                <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                {/* Masonry Grid - Responsive to Image Sizes */}
+                <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
                     {reviews.map((review, index) => (
                         <motion.div
                             layoutId={`card-${review.id}`}
@@ -57,14 +72,15 @@ export default function ReviewsPage() {
                             viewport={{ once: true, margin: "100px" }}
                             transition={{ duration: 0.5, delay: index * 0.05 }}
                             onClick={() => setSelectedId(review.id)}
-                            className="break-inside-avoid relative group cursor-zoom-in rounded-3xl overflow-hidden border border-border bg-white shadow-sm hover:shadow-xl transition-all duration-300"
+                            className="break-inside-avoid relative group cursor-zoom-in rounded-3xl overflow-hidden border border-border bg-white shadow-sm hover:shadow-xl transition-all duration-300 mb-4"
                         >
-                            <div className={`relative ${review.ratio} w-full`}>
+                            <div className="relative w-full h-auto">
                                 <Image
                                     src={review.src}
                                     alt={review.alt}
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    width={400}
+                                    height={600}
+                                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
 

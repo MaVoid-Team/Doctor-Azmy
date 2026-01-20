@@ -10,7 +10,7 @@ export default function BeforeAfterPage() {
     {
       id: 1,
       title: "قصة نجاح ملهمة",
-      description: "التزام كامل ببرنامج التغذية العلاجية أثمر عن نتائج مذهلة في وقت قياسي.",
+      description: "التزام كامل ببرنامج االتخسيس أثمر عن نتائج مذهلة في وقت قياسي.",
       stats: ["خسارة وزن ملحوظة", "٦ أشهر", "تغيير نمط حياة"],
       beforeImage: "/before.jpg",
       afterImage: "/after1.jpg",

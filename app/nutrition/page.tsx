@@ -31,6 +31,84 @@ export default function Nutrition() {
     },
   ]
 
+  const goodFoods = [
+    {
+      title: "الخضروات الورقية الداكنة",
+      description: "السبانخ، الكرنب، الجرجير غنية بالمعادن والفيتامينات ومنخفضة السعرات",
+      benefits: "فيتامين K، حديد، كالسيوم، مضادات أكسدة",
+      icon: "🥬",
+    },
+    {
+      title: "البروتينات الخالية من الدهون",
+      description: "الدجاج، السمك، البيض، اللحم الأحمر قليل الدهن تساعد في بناء العضلات",
+      benefits: "أحماض أمينية، فيتامين B12، حديد، دعم النسيج العضلي",
+      icon: "🍗",
+    },
+    {
+      title: "الحبوب الكاملة",
+      description: "الأرز البني، الشوفان، القمح الكامل توفر ألياف وتشعرك بالشبع لفترة أطول",
+      benefits: "ألياف غذائية، فيتامينات B، معادن، تحسين الهضم",
+      icon: "🌾",
+    },
+    {
+      title: "الدهون الصحية",
+      description: "زيت الزيتون، الأفوكادو، المكسرات، الأسماك الدهنية تساعد في امتصاص الفيتامينات",
+      benefits: "أوميجا 3، فيتامين E، صحة القلب والدماغ",
+      icon: "🥑",
+    },
+    {
+      title: "الفواكه والتوت",
+      description: "التفاح، البرتقال، التوت الأزرق غنية بالفيتامينات ومضادات الأكسدة",
+      benefits: "فيتامين C، ألياف، مضادات أكسدة قوية، تقليل الالتهاب",
+      icon: "🍎",
+    },
+    {
+      title: "البقوليات",
+      description: "العدس، الحمص، الفول تحتوي على بروتين نباتي عالي وألياف",
+      benefits: "بروتين نباتي، ألياف، حديد، تحسين صحة الجهاز الهضمي",
+      icon: "🫘",
+    },
+  ]
+
+  const foodsToAvoid = [
+    {
+      title: "المشروبات السكرية والعصائر",
+      description: "المشروبات الغازية، عصائر الفواكه المحلاة تحتوي على سعرات فارغة عالية جداً",
+      risks: "زيادة الوزن السريعة، ارتفاع السكر، تسوس الأسنان، مرض السكري",
+      icon: "🥤",
+    },
+    {
+      title: "الأطعمة المصنعة والمعلبة",
+      description: "الرقائق، الحلويات، الوجبات السريعة تحتوي على صوديوم ودهون عالية جداً",
+      risks: "ارتفاع ضغط الدم، السمنة، أمراض القلب، مواد حافظة ضارة",
+      icon: "🍔",
+    },
+    {
+      title: "السكريات المكررة والدقيق الأبيض",
+      description: "الخبز الأبيض، المعجنات، الحلويات تسبب قفزات سريعة في السكر",
+      benefits: "رفع السكر بسرعة، الإرهاق اللاحق، زيادة الجوع",
+      icon: "🍞",
+    },
+    {
+      title: "الدهون المشبعة والمتحولة",
+      description: "الزبدة، الدهون الحيوانية، الزيوت المهدرجة ترفع الكوليسترول الضار",
+      risks: "تصلب الشرايين، أمراض القلب، السمنة، تراجع الصحة العامة",
+      icon: "🧈",
+    },
+    {
+      title: "الأطعمة المقلية",
+      description: "الدجاج المقلي، البطاطس المقلية، الأطعمة المخبوزة بالزيت العميق",
+      risks: "سعرات عالية جداً، دهون متحولة، التهاب، مشاكل هضمية",
+      icon: "🍟",
+    },
+    {
+      title: "الكحول والمشروبات المحلاة",
+      description: "البيرة والنبيذ والمشروبات الكحولية تحتوي على سعرات كثيرة وفارغة",
+      risks: "سعرات فارغة، زيادة دهون البطن، تأثر الكبد، إدمان",
+      icon: "🍺",
+    },
+  ]
+
   const nutritionTips = [
     {
       title: "اختر الأطعمة الطبيعية",
@@ -88,7 +166,7 @@ export default function Nutrition() {
                 style={{ animationDelay: "0.2s" }}
               >
                 <p className="text-lg font-semibold text-white">
-                  ✨ خبرة عملية تزيد عن 15 سنة في مجال التغذية العلاجية والعلاج المتكامل
+                  ✨ خبرة عملية تزيد عن 15 سنة في مجال االتخسيس والعلاج المتكامل
                 </p>
               </div>
             </div>
@@ -141,6 +219,52 @@ export default function Nutrition() {
                   </h3>
                   <p className="text-sm text-muted-foreground mb-3">{benefit.desc}</p>
                   <p className="text-xs text-primary font-semibold bg-primary/10 p-2 rounded-lg">{benefit.details}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Good Foods Section */}
+        <section className="py-20 bg-green-50/30">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-foreground mb-12 text-center animate-fadeInUp">الأطعمة الصحية الموصى بها</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {goodFoods.map((food, idx) => (
+                <div
+                  key={idx}
+                  className="group bg-white rounded-2xl border border-green-200/50 p-6 hover:border-green-500/50 hover:shadow-xl transition-all duration-300 hover:translate-y-1 animate-fadeInUp"
+                  style={{ animationDelay: `${idx * 0.08}s` }}
+                >
+                  <p className="text-4xl mb-4 group-hover:scale-125 transition-transform">{food.icon}</p>
+                  <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-green-600 transition-colors">
+                    {food.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{food.description}</p>
+                  <p className="text-xs text-green-700 font-semibold bg-green-50 p-2 rounded-lg">{food.benefits}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Foods to Avoid Section */}
+        <section className="py-20 bg-red-50/30">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-foreground mb-12 text-center animate-fadeInUp">الأطعمة التي يجب تجنبها</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {foodsToAvoid.map((food, idx) => (
+                <div
+                  key={idx}
+                  className="group bg-white rounded-2xl border border-red-200/50 p-6 hover:border-red-500/50 hover:shadow-xl transition-all duration-300 hover:translate-y-1 animate-fadeInUp"
+                  style={{ animationDelay: `${idx * 0.08}s` }}
+                >
+                  <p className="text-4xl mb-4 group-hover:scale-125 transition-transform">{food.icon}</p>
+                  <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-red-600 transition-colors">
+                    {food.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{food.description}</p>
+                  <p className="text-xs text-red-700 font-semibold bg-red-50 p-2 rounded-lg">⚠️ المخاطر: {food.risks}</p>
                 </div>
               ))}
             </div>

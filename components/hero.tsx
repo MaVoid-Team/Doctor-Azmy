@@ -47,7 +47,7 @@ const Hero = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg mr-auto lg:mr-0 leading-relaxed font-medium">
-              عندما تبحث عن <span className="text-primary font-bold decoration-accent decoration-2 underline-offset-4 underline">الأفضل</span>، فإن دكتور محمد عزمي هو وجهتك. خبرة لا تضاهى في التغذية العلاجية وعلاج السمنة بنتائج مضمونة.
+              عندما تبحث عن <span className="text-primary font-bold decoration-accent decoration-2 underline-offset-4 underline">الأفضل</span>، فإن دكتور محمد عزمي هو وجهتك. خبرة لا تضاهى في االتخسيس وعلاج السمنة بنتائج مضمونة.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-start">
