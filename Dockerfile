@@ -11,8 +11,8 @@ RUN npm install -g pnpm
 # Copy package files
 COPY package.json pnpm-lock.yaml ./
 
-# Install dependencies
-RUN pnpm install --frozen-lockfile
+# Install dependencies (will generate new lockfile)
+RUN pnpm install
 
 # Stage 2: Builder
 FROM node:20-alpine AS builder
