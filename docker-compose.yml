@@ -1,9 +1,0 @@
-services:
-  app:
-    build: .
-    container_name: my-new-app
-    restart: unless-stopped
-    env_file:
-      - .env
-    ports:
-      - "3005:3000"
