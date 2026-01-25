@@ -48,7 +48,7 @@ const Footer = () => {
                   href="/nutrition"
                   className="hover:text-white transition-colors hover:translate-x-1 inline-block duration-300"
                 >
-                  التغذية العلاجية
+                 التخسيس الامن و نحت القوام  
                 </Link>
               </li>
             </ul>

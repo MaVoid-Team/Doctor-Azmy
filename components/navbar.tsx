@@ -47,7 +47,7 @@ const Navbar = () => {
                 دكتور محمد عزمي
               </span>
               <span className="text-xs text-muted-foreground font-medium tracking-wide">
-                استشاري التخسيس
+               استشاري التخسيس و التجميل
               </span>
             </div>
           </Link>

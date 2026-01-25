@@ -158,7 +158,7 @@ export default function Nutrition() {
                 دكتور محمد عزمي
               </h1>
               <p className="text-2xl sm:text-3xl font-bold text-white/95 mb-8">
-                أفضل متخصص تغذية علاجية في المنصورة والشرقية
+               افضل دكتور تخسيس
               </p>
 
               <div
@@ -304,7 +304,7 @@ export default function Nutrition() {
                   step: 1,
                   title: "التقييم الشامل",
                   desc: "فحص طبي تفصيلي وتحاليل مخبرية لفهم احتياجاتك الفريدة",
-                  details: "نقيس الوزن والطول والدهون، ونجري تحاليل الدم الضرورية",
+                  details: "نقيس الوزن والطول و تحليل الدهون بافضل جهاز انبودي عالميا من حيث الدقة inbody 270",
                 },
                 {
                   step: 2,
@@ -342,6 +342,108 @@ export default function Nutrition() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Devices Section */}
+        <section className="py-20">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-foreground mb-12 text-center animate-fadeInUp">
+              أجهزة طبية متقدمة
+            </h2>
+            <p className="text-lg text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
+              نستخدم أحدث وأفضل الأجهزة الطبية العالمية لضمان أفضل النتائج وأعلى معايير السلامة والفعالية
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* InBody 270 Device */}
+              <div className="group bg-white rounded-3xl border border-border/50 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:border-primary/50 animate-fadeInUp">
+                <div className="relative h-80 bg-gradient-to-br from-blue-50 to-cyan-50 overflow-hidden flex items-center justify-center p-6">
+                  <img 
+                    src="/devices/inbody-270.png" 
+                    alt="جهاز InBody 270" 
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                    قياس تحليل الجسم المتقدم
+                  </h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    أفضل جهاز قياس تحليل الدهون عالمياً من حيث الدقة والموثوقية
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <span className="text-primary font-bold text-lg">✓</span>
+                      <span className="text-foreground">قياس نسبة الدهون وتوزيعها في الجسم</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-primary font-bold text-lg">✓</span>
+                      <span className="text-foreground">قياس نسبة السوائل والعضلات</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-primary font-bold text-lg">✓</span>
+                      <span className="text-foreground">تحليل كثافة العظام</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-primary font-bold text-lg">✓</span>
+                      <span className="text-foreground">قياس معدل الحرق الأساسي</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-primary font-bold text-lg">✓</span>
+                      <span className="text-foreground">درجة الدهون الثلاثية ودرجة السمنة</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-primary font-semibold mt-6 bg-primary/10 p-3 rounded-lg">
+                    📍 المقياس الأول والأساسي لبرنامجك العلاجي
+                  </p>
+                </div>
+              </div>
+
+              {/* I-Sculpture Device */}
+              <div className="group bg-white rounded-3xl border border-border/50 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:border-primary/50 animate-fadeInUp" style={{ animationDelay: "0.1s" }}>
+                <div className="relative h-80 bg-gradient-to-br from-purple-50 to-pink-50 overflow-hidden flex items-center justify-center p-6">
+                  <img 
+                    src="/devices/sculpture.png" 
+                    alt="جهاز نحت الجسم I-Sculpture" 
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                    أجهزة نحت وشد الجسم
+                  </h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    نحت الجسم وشد الترهلات بدون جراحة بأمان تام وبدون أعراض جانبية
+                  </p>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-start gap-3">
+                      <span className="text-primary font-bold text-lg">⭐</span>
+                      <span className="text-foreground">جلسات ميزوثيرابي عالمية متقدمة</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-primary font-bold text-lg">⭐</span>
+                      <span className="text-foreground">تقنية الليزر لتفتيت الدهون</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-primary font-bold text-lg">⭐</span>
+                      <span className="text-foreground">تقنية الكرايو 3D Cryolipolysis</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-primary font-bold text-lg">⭐</span>
+                      <span className="text-foreground">جهاز I-Sculpture الموثوق عالمياً</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-primary font-bold text-lg">⭐</span>
+                      <span className="text-foreground">LS650 للعلاجات المتقدمة</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-primary font-semibold bg-primary/10 p-3 rounded-lg">
+                    ✨ نتائج من الجلسة الأولى تحت إشراف الطبيب مباشرة
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
