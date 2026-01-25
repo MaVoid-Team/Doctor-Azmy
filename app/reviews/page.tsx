@@ -9,6 +9,7 @@ import { X, ZoomIn } from "lucide-react"
 
 // Success stories from customer reviews
 const reviews = [
+    { id: 0, src: "/reveeeeee.jpg", alt: "Review Featured" },
     { id: 1, src: "/rev1.jpg", alt: "Review 1" },
     { id: 2, src: "/rev2.jpg", alt: "Review 2" },
     { id: 3, src: "/rev3.jpg", alt: "Review 3" },
