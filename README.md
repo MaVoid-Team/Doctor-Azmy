@@ -1,30 +1,29 @@
-# Medical clinic website
+# Doctor Azmy
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+The clinic’s public front door — so patients in Mansoura can see the care, the results, and how to book.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/ziadahmed252525-gmailcoms-projects/v0-medical-clinic-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/m0FXM6U343l)
+## Who it’s for
 
-## Overview
+People looking for obesity treatment, therapeutic nutrition, or non-surgical body and skin care with Dr. Mohamed Azmy. If you want to know what the clinic actually offers before you call, this is the site.
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## What you can do
 
-## Deployment
+- Browse body sculpting, skin, hair, and laser services in one place
+- Walk through real before-and-after transformations from the clinic
+- Read patient success stories and short medical articles
+- See how the therapeutic-nutrition program is structured
+- Book a consultation from the contact page, or reach the clinic by phone or WhatsApp
 
-Your project is live at:
+## Try it
 
-**[https://vercel.com/ziadahmed252525-gmailcoms-projects/v0-medical-clinic-website](https://vercel.com/ziadahmed252525-gmailcoms-projects/v0-medical-clinic-website)**
+The live site: **[https://doctor-azmy.vercel.app](https://doctor-azmy.vercel.app)**
 
-## Build your app
+## How it works
 
-Continue building your app on:
+Arabic (RTL) pages walk visitors from the doctor’s credentials to a booking CTA. Home covers who he is and what the clinic treats. Separate pages hold results, reviews, nutrition, and contact. This is the marketing site — not a patient portal.
 
-**[https://v0.app/chat/m0FXM6U343l](https://v0.app/chat/m0FXM6U343l)**
+---
 
-## How It Works
+Built by [Ziad Ahmed](https://github.com/Ziad-NasrEldin) at [MaVoid](https://mavoid.com).
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+[Website](https://mavoid.com) · [LinkedIn](https://linkedin.com/in/ziad-ahmed-634202332) · [GitHub](https://github.com/Ziad-NasrEldin)
